@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #181719;
+}
+
+body {
+  color: #FFFFFF;
+}
+
+nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+nav .active {
+  text-decoration: underline;
+}
+
+.container h2 {
+  font-family: "Crimson Pro", serif;
+}
