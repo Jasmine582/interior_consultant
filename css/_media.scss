@@ -1,0 +1,42 @@
+@media (max-width: 375px){
+  .hamburger {
+    margin-left: 19em;
+  }
+}
+
+@media(min-width:1280px) {
+  .hamburger{
+    display: none;
+  }
+  header{
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo{
+      margin-top: -1%;
+      width: 80%;
+    }
+  }
+  nav{
+    margin-left: 28em;
+    position: static;
+   
+    a{
+      padding: 0.1em 0 0.1em 0;
+
+    
+    }
+
+    ul{
+      display: flex;
+      justify-content: space-evenly;
+    }
+ul>li{
+    padding-left: 2rem;
+  }
+  }
+
+
+}

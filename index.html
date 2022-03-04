@@ -4,52 +4,67 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="devchallenges.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
+
   <title>Interior Consultant </title>
   <link rel="stylesheet" href="/css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
   <header>
-    <div class="container">
-      <p>this interior</p>
+    <div class="wrapper">
+      <span class="logo">
+        this interior
+      </span>
+      <div id="hamburger" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <nav>
-      <ul>
-        <li><a href="#"class="active">Home</a></li>
-        <li><a href="#">Collection</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-    </div>
+        <ul>
+          <li><a href="#" class="nav">Home</a></li>
+          <li><a href="#" class="nav">Collections</a></li>
+          <li><a href="#" class="nav">About</a></li>
+          <li><a href="#" class="nav">Contact</a></li>
+        </ul>
+      </nav>
+    </div> <!--wrapper ends-->
   </header>
   <main>
-    <div class="container">
-    <h2>Modern interior</h2>
-    <p>A full-Service residential &amp; commercial interior design and staging company offering professional organizing &amp; eco-services.</p>
-    <p>Read more -></p>
-    <figure>
-      <div class="hero"></div>
-    </figure>
-    <figure>
-      <div class="design">
-        <div class="box">
-        <img src="/img/photo2.png" alt="designer img">
-        <h6>Aliza Webber</h6>
-        <p>Interior designer</p>
-        <p class="desc"><strong>Designed in 2020 by Aliza Webber</strong></p>
+    <div class="hero">
+      <div class="text">
+        <h1>Modern Interior</h1>
+        <p>A full-Service residential & commercial interior design and staging company offering professional organizing
+          &
+          eco-services.</p>
+        <p> Read More
+          <span class="material-icons">
+          arrow_right_alt
+        </span></p>
       </div>
-      </div>
-    </figure>
-  </div>
+     <div class="hero-img">
+       <img src="/img/photo1.png" alt="hero-img">
+     </div>
+    </div>
   </main>
-  <footer></footer>
+
+  <script>
+window.onload = function () {
+  const nav = document.querySelector("nav");
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.querySelectorAll("ul")
+
+  hamburger.addEventListener("click", () => {
+    nav.classList.toggle("open");
+    hamburger.classList.toggle("open");
+  });
+};
+  </script>
 </body>
 </html>

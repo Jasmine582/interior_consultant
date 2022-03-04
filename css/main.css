@@ -2,25 +2,151 @@
   margin: 0;
   padding: 0;
   background-color: #181719;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
 }
 
 body {
   color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem 2rem 1.5rem;
 }
 
-nav a {
-  color: #FFFFFF;
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
+.logo {
+  font: 1.2rem "Crimson Pro", sans-serif;
+  font-weight: 200;
+  padding: 0.8rem 0.9rem 0.7rem 0.8rem;
+  border: 1px solid white;
+  text-transform: uppercase;
 }
-nav .active {
+
+header {
+  display: flex;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hamburger {
+  cursor: pointer;
+  height: 3rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 21.8em;
+  margin-top: -3em;
+}
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: #f2f2f2;
+  display: block;
+  transition: all ease-in-out 0.25s;
+}
+
+.hamburger.open > span:first-child {
+  transform: rotate(25deg);
+}
+
+.hamburger.open > span:nth-child(2) {
+  display: none;
+}
+
+.hamburger.open > span:last-child {
+  transform: rotate(-45deg);
+}
+
+nav {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: -100%;
+  width: 90%;
+  height: 100%;
+  z-index: 1;
+  transition: left ease-in 0.35s;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 1.4rem;
+  border-bottom: 2px solid transparent;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+}
+nav li {
+  list-style: none;
+}
+
+a:hover {
   text-decoration: underline;
 }
 
-.container h2 {
-  font-family: "Crimson Pro", serif;
+nav.open {
+  left: 0;
 }
 
-.desc {
-  font-family: "Lora", serif;
+main {
+  margin-top: 1em;
+}
+
+.hero h1 {
+  font-family: "Lora", sans-serif;
+  margin-bottom: 1.2em;
+  font-size: 2.6em;
+  font-weight: 500;
+  margin: 3.8rem 0 2.5rem 0;
+}
+.hero p {
+  font-size: 1.4em;
+  font-family: "Montserrat", sans-serif;
+  width: 92%;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 375px) {
+  .hamburger {
+    margin-left: 19em;
+  }
+}
+@media (min-width: 1280px) {
+  .hamburger {
+    display: none;
+  }
+
+  header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .logo {
+    margin-top: -1%;
+    width: 80%;
+  }
+
+  nav {
+    margin-left: 28em;
+    position: static;
+  }
+  nav a {
+    padding: 0.1em 0 0.1em 0;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  nav ul > li {
+    padding-left: 2rem;
+  }
 }

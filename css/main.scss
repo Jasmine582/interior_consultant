@@ -2,27 +2,117 @@
     margin: 0;
     padding: 0;
     background-color :#181719;
-   
+    box-sizing: border-box;
+}
+img {
+    width:100%;
 }
 body{
     color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem 2rem 1.5rem;
 }
-nav {
-    a{
-    color: #FFFFFF;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    }
-    .active {
-        text-decoration: underline;
-    }
+//Header
+.logo {
+    font: 1.2rem "Crimson Pro", sans-serif;
+    font-weight: 200;
+    padding: 0.8rem 0.9rem 0.7rem 0.8rem;
+    border: 1px solid white;
+    text-transform: uppercase;
 }
- .container {
-        h2{
-            font-family: 'Crimson Pro', serif;
+header {
+    display: flex;
+    margin-top: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.hamburger {
+    cursor: pointer;
+    height: 3rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 21.8em;
+    margin-top: -3em;
 
-        }
+   span {
+    width: 30px;
+    height: calc(30px / 10);
+    background-color: #f2f2f2;
+    display: block;
+    transition: all ease-in-out 0.25s;
+    }
   }
-  .desc {
-    font-family: 'Lora', serif;
+  .hamburger.open > span:first-child {
+    transform: rotate(25deg);
   }
+  
+  .hamburger.open > span:nth-child(2) {
+    display: none;
+  }
+  
+  .hamburger.open > span:last-child {
+    transform: rotate(-45deg);
+  }
+nav {
+ position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: -100%;
+  width: 90%;
+  height: 100%;
+  z-index: 1;
+  transition: left ease-in 0.35s;
+a{
+display: block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  
+  margin-bottom: 1.4rem;
+  border-bottom: 2px solid transparent;
+//   padding: 0.8em 0 0.8em 0;
+  letter-spacing: 1px; 
+  color: #FFFFFF;
+
+
+    }
+    li {
+        list-style: none;
+    }
+}
+a:hover {
+    text-decoration: underline;
+  }
+
+nav.open {
+  left: 0;
+}
+main{
+    margin-top:1em;
+}
+.hero{
+    h1{
+        font-family:"Lora", sans-serif;
+        margin-bottom: 1.2em;
+        font-size:2.6em;
+        font-weight: 500;
+  margin: 3.8rem 0 2.5rem 0;
+    }
+    p{
+        font-size:1.4em;
+        font-family:"Montserrat", sans-serif;
+        width:92%;
+        margin-bottom: 2.5rem;
+    }
+}
+
+ 
+
+@import 'media';
