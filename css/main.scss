@@ -1,118 +1,231 @@
-*{
-    margin: 0;
-    padding: 0;
-    background-color :#181719;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #181719;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-img {
-    width:100%;
-}
-body{
-    color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 1.5rem 2rem 1.5rem;
-}
-//Header
-.logo {
-    font: 1.2rem "Crimson Pro", sans-serif;
-    font-weight: 200;
-    padding: 0.8rem 0.9rem 0.7rem 0.8rem;
-    border: 1px solid white;
-    text-transform: uppercase;
-}
-header {
-    display: flex;
-    margin-top: 0.5rem;
-    align-items: center;
-    justify-content: space-between;
-}
-.hamburger {
-    cursor: pointer;
-    height: 3rem;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-left: 21.8em;
-    margin-top: -3em;
 
-   span {
-    width: 30px;
-    height: calc(30px / 10);
-    background-color: #f2f2f2;
-    display: block;
-    transition: all ease-in-out 0.25s;
-    }
-  }
-  .hamburger.open > span:first-child {
-    transform: rotate(25deg);
-  }
-  
-  .hamburger.open > span:nth-child(2) {
-    display: none;
-  }
-  
-  .hamburger.open > span:last-child {
-    transform: rotate(-45deg);
-  }
-nav {
- position: absolute;
+img {
+  width: 100%;
+}
+
+body {
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+}
+
+.logo {
+  font: 1.2rem "Crimson Pro", sans-serif;
+  font-weight: 200;
+  padding: 0.8rem 0.9rem 0.7rem 0.8rem;
+  border: 1px solid white;
+  text-transform: uppercase;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hamburger {
+  cursor: pointer;
+  height: 3rem;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-left: 21.8em;
+  margin-top: -3em;
+}
+
+.hamburger span {
+  width: 30px;
+  height: calc(30px / 10);
+  background-color: #f2f2f2;
+  display: block;
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
+}
+
+.hamburger.open > span:first-child {
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+
+.hamburger.open > span:nth-child(2) {
+  display: none;
+}
+
+.hamburger.open > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+nav {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   top: 0;
   left: -100%;
   width: 90%;
   height: 100%;
   z-index: 1;
+  -webkit-transition: left ease-in 0.35s;
   transition: left ease-in 0.35s;
-a{
-display: block;
+}
+
+nav a {
+  display: block;
   text-decoration: none;
   text-align: center;
   font-size: 1.8rem;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
-  
   margin-bottom: 1.4rem;
   border-bottom: 2px solid transparent;
-//   padding: 0.8em 0 0.8em 0;
-  letter-spacing: 1px; 
-  color: #FFFFFF;
-
-
-    }
-    li {
-        list-style: none;
-    }
+  letter-spacing: 1px;
+  color: #ffffff;
 }
+
+nav li {
+  list-style: none;
+}
+
 a:hover {
-    text-decoration: underline;
-  }
+  text-decoration: underline;
+}
 
 nav.open {
   left: 0;
 }
-main{
-    margin-top:1em;
+
+main {
+  margin-top: 1em;
 }
-.hero{
-    h1{
-        font-family:"Lora", sans-serif;
-        margin-bottom: 1.2em;
-        font-size:2.6em;
-        font-weight: 500;
+
+.hero h1 {
+  font-family: "Lora", sans-serif;
+  margin-bottom: 1.2em;
+  font-size: 2.6em;
+  font-weight: 500;
   margin: 3.8rem 0 2.5rem 0;
-    }
-    p{
-        font-size:1.4em;
-        font-family:"Montserrat", sans-serif;
-        width:92%;
-        margin-bottom: 2.5rem;
-    }
 }
 
- 
+.hero p {
+  font-size: 1.4em;
+  font-family: "Montserrat", sans-serif;
+  width: 92%;
+  margin-bottom: 2.5rem;
+}
 
-@import 'media';
+.consultant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  background-color: #181719;
+  padding: 2rem 10rem 5rem 1.5rem;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-transform: translate(-7.5%, -35%);
+          transform: translate(-7.5%, -35%);
+}
+
+.consultant img {
+  height: 3rem;
+  -webkit-clip-path: circle(50% at center);
+          clip-path: circle(50% at center);
+}
+
+.consultant .blurb {
+  font-family: "Merriweather", serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.consultant .top-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 375px) {
+  .hamburger {
+    margin-left: 19em;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hamburger {
+    display: none;
+  }
+  header .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .logo {
+    margin-top: -1%;
+    width: 80%;
+  }
+  nav {
+    margin-left: 28em;
+    position: static;
+  }
+  nav a {
+    padding: 0.1em 0 0.1em 0;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  nav ul > li {
+    padding-left: 2rem;
+  }
+}
